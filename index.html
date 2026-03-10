@@ -24,6 +24,7 @@
         .skill-content { flex: 1; }
         .skill h3 { margin-top: 0; margin-bottom: 10px; color: #4a154b; font-size: 1.25em; }
         .skill-desc { font-style: italic; color: #555; margin-bottom: 15px; background: #f4f4f4; padding: 10px; border-left: 4px solid #ccc; border-radius: 4px; }
+        .skill-simple { font-weight: 500; color: #008000; margin-bottom: 15px; }
         .skill-mechanics { margin: 0; padding-left: 20px; }
         .skill-mechanics li { margin-bottom: 5px; }
         .formula { background: #fafafa; border-left: 3px solid #666; font-size: 0.9em; padding: 10px; margin-top: 10px; }
@@ -58,12 +59,13 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_smash.png" alt="Мощный удар">
         <div class="skill-content">
             <h3>Мощный удар (Brutal Smash)</h3>
-            <div class="skill-desc">Вы делаете задание более синим/менее красным и наносите дополнительный урон Боссам! (На основе: СИЛ)</div>
+            <div class="skill-desc">Офиц. описание: Вы делаете задание более синим/менее красным и наносите дополнительный урон Боссам! (На основе: СИЛ)</div>
+            <div class="skill-simple">✨ Простыми словами: Делает одну задачу более "безопасной" и наносит урон боссу квеста.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 11 уровне</li>
                 <li><strong>Затраты маны:</strong> 10 MP</li>
                 <li><strong>Улучшение задачи:</strong> Увеличивает скрытое значение (Value/Цвет) выбранной задачи.
-                    <div class="formula"><strong>Формула (к цвету):</strong> <code class="math">+2.5 * (Сила*Крит) / ((Сила*Крит) + 35)</code>. Максимальное улучшение: <code class="math">+2.5</code> к значению задачи (она значительно посинеет).</div>
+                    <div class="formula"><strong>Формула (к цвету):</strong> <code class="math">+2.5 * (Сила*Крит) / ((Сила*Крит) + 35)</code>. Максимальное улучшение: <code class="math">+2.5</code> к значению задачи.</div>
                 </li>
                 <li><strong>Урон по боссу:</strong> Наносит боссу урон, прибавляющийся к вашему прогрессу в квесте.
                     <div class="formula"><strong>Формула урона:</strong> <code class="math">55 * (Сила*Крит) / ((Сила*Крит) + 70)</code>. Максимальный разовый урон по боссу: <code class="math">55</code>.</div>
@@ -76,7 +78,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_defensiveStance.png" alt="Защитная стойка">
         <div class="skill-content">
             <h3>Защитная стойка (Defensive Stance)</h3>
-            <div class="skill-desc">Вы низко приседаете и получаете баф к телосложению! (На основе: ТЕЛ без бафов)</div>
+            <div class="skill-desc">Офиц. описание: Вы низко приседаете и получаете баф к телосложению! (На основе: ТЕЛ без бафов)</div>
+            <div class="skill-simple">✨ Простыми словами: Вы весь день получаете меньше урона от пропущенных ежедневных задач.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 12 уровне</li>
                 <li><strong>Затраты маны:</strong> 25 MP</li>
@@ -91,7 +94,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_valorousPresence.png" alt="Присутствие духа">
         <div class="skill-content">
             <h3>Присутствие духа (Valorous Presence)</h3>
-            <div class="skill-desc">Ваша смелость повышает силу всей вашей команды! (На основе: СИЛ без бафов)</div>
+            <div class="skill-desc">Офиц. описание: Ваша смелость повышает силу всей вашей команды! (На основе: СИЛ без бафов)</div>
+            <div class="skill-simple">✨ Простыми словами: Вся ваша команда будет наносить больше урона боссам до конца дня.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 13 уровне</li>
                 <li><strong>Затраты маны:</strong> 20 MP</li>
@@ -106,7 +110,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_intimidate.png" alt="Устрашающий взор">
         <div class="skill-content">
             <h3>Устрашающий взор (Intimidating Gaze)</h3>
-            <div class="skill-desc">Ваш пристальный взгляд повышает телосложение всей вашей команды! (На основе: ТЕЛ без бафов)</div>
+            <div class="skill-desc">Офиц. описание: Ваш пристальный взгляд повышает телосложение всей вашей команды! (На основе: ТЕЛ без бафов)</div>
+            <div class="skill-simple">✨ Простыми словами: Вся ваша команда будет получать меньше урона от пропущенных задач до конца дня.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 14 уровне</li>
                 <li><strong>Затраты маны:</strong> 15 MP</li>
@@ -124,12 +129,13 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_pickPocket.png" alt="Карманная кража">
         <div class="skill-content">
             <h3>Карманная кража (Pickpocket)</h3>
-            <div class="skill-desc">Вы грабите ближайшую задачу и получаете золото! (На основе: ВОС)</div>
+            <div class="skill-desc">Офиц. описание: Вы грабите ближайшую задачу и получаете золото! (На основе: ВОС)</div>
+            <div class="skill-simple">✨ Простыми словами: Моментально выдаёт вам порцию золота за счет выбранной задачи.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 11 уровне</li>
                 <li><strong>Затраты маны:</strong> 10 MP</li>
                 <li><strong>Механика:</strong> Применяется на выбранную задачу. Мгновенно генерирует для вас Золото. Разрешает красть из одной задачи сколько угодно раз.
-                    <div class="formula"><strong>Формула множителя кражи:</strong> <code class="math">Бонус = (Цвет Задачи + 1) + ВОС * 0.5</code> (для синих задач), для красных берется фиктивный цвет в виде 1.</div>
+                    <div class="formula"><strong>Формула множителя кражи:</strong> <code class="math">Бонус = (Цвет Задачи + 1) + ВОС * 0.5</code>.</div>
                     <div class="formula"><strong>Формула золота:</strong> <code class="math">25 * (Бонус) / (Бонус + 75)</code>. За 1 клик навык может выдать максимум <code class="math">25 Золота</code>.</div>
                 </li>
             </ul>
@@ -140,7 +146,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_backStab.png" alt="Удар в спину">
         <div class="skill-content">
             <h3>Удар в спину (Backstab)</h3>
-            <div class="skill-desc">Вы предаете глупую задачу и получаете золото и опыт! (На основе: СИЛ)</div>
+            <div class="skill-desc">Офиц. описание: Вы предаете глупую задачу и получаете золото и опыт! (На основе: СИЛ)</div>
+            <div class="skill-simple">✨ Простыми словами: Моментально выдаёт вам порцию золота и опыта за счет выбранной задачи.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 12 уровне</li>
                 <li><strong>Затраты маны:</strong> 15 MP</li>
@@ -157,7 +164,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_toolsOfTrade.png" alt="Орудия труда">
         <div class="skill-content">
             <h3>Орудия труда (Tools of the Trade)</h3>
-            <div class="skill-desc">Вы делитесь своими хитрыми приемами, повышая восприятие всей вашей команды! (На основе: ВОС без бафов)</div>
+            <div class="skill-desc">Офиц. описание: Вы делитесь своими хитрыми приемами, повышая восприятие всей вашей команды! (На основе: ВОС без бафов)</div>
+            <div class="skill-simple">✨ Простыми словами: Вся ваша команда будет находить больше золота и предметов в этот день.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 13 уровне</li>
                 <li><strong>Затраты маны:</strong> 25 MP</li>
@@ -172,7 +180,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_stealth.png" alt="Уйти в тень">
         <div class="skill-content">
             <h3>Уйти в тень (Stealth)</h3>
-            <div class="skill-desc">С каждым использованием, несколько невыполненных ежедневных заданий не нанесут урон ночью. Их серии и цвета не изменятся. (На основе: ВОС)</div>
+            <div class="skill-desc">Офиц. описание: С каждым использованием, несколько невыполненных ежедневных заданий не нанесут урон ночью. Их серии и цвета не изменятся. (На основе: ВОС)</div>
+            <div class="skill-simple">✨ Простыми словами: Спасает от провала нескольких невыполненных ежедневных задач (урона не будет, счетчики не упадут).</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 14 уровне</li>
                 <li><strong>Затраты маны:</strong> 45 MP</li>
@@ -184,13 +193,14 @@
     </div>
 
     <!-- МАГ -->
-    <h2>🧙‍♂️ Маг (Wizard/Mage)</h2>
+    <h2>🧙‍♂️ Маг (Wizard)</h2>
 
     <div class="skill">
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_fireball.png" alt="Всплеск пламени">
         <div class="skill-content">
             <h3>Всплеск пламени (Burst of Flames)</h3>
-            <div class="skill-desc">Вы получаете опыт и наносите пламенный урон боссам! (На основе: ИНТ)</div>
+            <div class="skill-desc">Офиц. описание: Вы получаете опыт и наносите пламенный урон боссам! (На основе: ИНТ)</div>
+            <div class="skill-simple">✨ Простыми словами: Вы мгновенно получаете опыт и дополнительно наносите урон активному боссу квеста.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 11 уровне</li>
                 <li><strong>Затраты маны:</strong> 10 MP</li>
@@ -207,7 +217,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_mpheal.png" alt="Эфирная зарядка">
         <div class="skill-content">
             <h3>Эфирная зарядка (Ethereal Surge)</h3>
-            <div class="skill-desc">Вы жертвуете ману, чтобы участники команды, кроме магов, восполнили ману! (На основе: ИНТ)</div>
+            <div class="skill-desc">Офиц. описание: Вы жертвуете ману, чтобы участники команды, кроме магов, восполнили ману! (На основе: ИНТ)</div>
+            <div class="skill-simple">✨ Простыми словами: Восстанавливает запас маны (MP) вашим союзникам.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 12 уровне</li>
                 <li><strong>Затраты маны:</strong> 30 MP</li>
@@ -222,7 +233,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_earth.png" alt="Землетрясение">
         <div class="skill-content">
             <h3>Землетрясение (Earthquake)</h3>
-            <div class="skill-desc">Силой ума вы сотрясаете землю. Вся ваша команда получает баф к интеллекту! (На основе: ИНТ без бафов)</div>
+            <div class="skill-desc">Офиц. описание: Силой ума вы сотрясаете землю. Вся ваша команда получает баф к интеллекту! (На основе: ИНТ без бафов)</div>
+            <div class="skill-simple">✨ Простыми словами: Вся ваша команда будет получать больше опыта и быстрее восстанавливать ману.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 13 уровне</li>
                 <li><strong>Затраты маны:</strong> 35 MP</li>
@@ -237,12 +249,13 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_frost.png" alt="Пронизывающий мороз">
         <div class="skill-content">
             <h3>Пронизывающий мороз (Chilling Frost)</h3>
-            <div class="skill-desc">Одним взмахом, все ваши задачи покрываются льдом, из-за чего ваши серии не сбрасываются завтра!</div>
+            <div class="skill-desc">Офиц. описание: Одним взмахом, все ваши задачи покрываются льдом, из-за чего ваши серии не сбрасываются завтра!</div>
+            <div class="skill-simple">✨ Простыми словами: Если вы сегодня не выполните ежедневные задачи, счетчики подряд выполненных дней у них не обнулятся.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 14 уровне</li>
                 <li><strong>Затраты маны:</strong> 40 MP</li>
                 <li><strong>Механика:</strong> Накладывает статус "Заморозка серий". Если вы не выполните ежедневные задачи, их серии (streak счетчик) не упадут до нуля на следующий день.
-                    <div class="formula"><strong>Ограничение:</strong> Без математики. Эффект просто ставит флаг <code class="math">true</code>. Может быть применено только один раз за день (при повторной попытке выдаст ошибку).</div>
+                    <div class="formula"><strong>Ограничение:</strong> Эффект просто ставит флаг <code class="math">true</code>. Может быть применено только один раз за день (при повторной попытке выдаст ошибку).</div>
                 </li>
             </ul>
         </div>
@@ -255,11 +268,12 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_heal.png" alt="Исцеляющий свет">
         <div class="skill-content">
             <h3>Исцеляющий свет (Healing Light)</h3>
-            <div class="skill-desc">Свет окутывает ваше тело, исцеляя раны. Вы восстанавливаете здоровье! (На основе: ТЕЛ и ИНТ)</div>
+            <div class="skill-desc">Офиц. описание: Свет окутывает ваше тело, исцеляя раны. Вы восстанавливаете здоровье! (На основе: ТЕЛ и ИНТ)</div>
+            <div class="skill-simple">✨ Простыми словами: Моментально излечивает ваше здоровье (HP).</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 11 уровне</li>
                 <li><strong>Затраты маны:</strong> 15 MP</li>
-                <li><strong>Механика:</strong> Сильно лечит только вас (максимум здоровья в игре - 50 очков). Нельзя использовать, если здоровье כבר полное.
+                <li><strong>Механика:</strong> Сильно и точечно лечит только вас (максимум здоровья в игре - 50 очков). Нельзя использовать, если здоровье כבר полное.
                     <div class="formula"><strong>Формула исцеления:</strong> <code class="math">(ТЕЛ + ИНТ + 5) * 0.075</code> (то есть <code class="math">7.5%</code> суммы ваших статов). Нет предела "полезности", здоровье лечится чисто линейно.</div>
                 </li>
             </ul>
@@ -270,11 +284,12 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_brightness.png" alt="Ослепляющая вспышка">
         <div class="skill-content">
             <h3>Ослепляющая вспышка (Searing Brightness)</h3>
-            <div class="skill-desc">Вспышка света ослепляет ваши задачи. Они становятся более синими и менее красными! (На основе: ИНТ)</div>
+            <div class="skill-desc">Офиц. описание: Вспышка света ослепляет ваши задачи. Они становятся более синими и менее красными! (На основе: ИНТ)</div>
+            <div class="skill-simple">✨ Простыми словами: Сразу все ваши задачи станут более "безопасными" (перестанут быть красными).</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 12 уровне</li>
                 <li><strong>Затраты маны:</strong> 15 MP</li>
-                <li><strong>Механика:</strong> Применяется сразу ко <strong>ВСЕМ</strong> вашим задачам. Значительно улучшает цвет задач (value), уводя их в синюю сторону.
+                <li><strong>Механика:</strong> Применяется сразу ко <strong>ВСЕМ</strong> вашим задачам списком. Значительно улучшает цвет всех ваших задач, уводя их цвет в синюю сторону.
                     <div class="formula"><strong>Формула (к цвету всех задач):</strong> <code class="math">+ 4 * (ИНТ) / (ИНТ + 40)</code>. Каждая задача получает максимум <code class="math">+4.0</code> к скрытому значению (это чрезвычайно много, особенно сразу для всего списка).</div>
                 </li>
             </ul>
@@ -285,7 +300,8 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_protectAura.png" alt="Защитная аура">
         <div class="skill-content">
             <h3>Защитная аура (Protective Aura)</h3>
-            <div class="skill-desc">Вы защищаете свою команду, повышая их телосложение! (На основе: ТЕЛ без бафов)</div>
+            <div class="skill-desc">Офиц. описание: Вы защищаете свою команду, повышая их телосложение! (На основе: ТЕЛ без бафов)</div>
+            <div class="skill-simple">✨ Простыми словами: Очень сильно защищает всю вашу команду от получения урона на весь день.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 13 уровне</li>
                 <li><strong>Затраты маны:</strong> 30 MP</li>
@@ -300,11 +316,12 @@
         <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_healAll.png" alt="Благословение">
         <div class="skill-content">
             <h3>Благословение (Blessing)</h3>
-            <div class="skill-desc">Ваше успокаивающее заклинание восстанавливает здоровье всей вашей команды! (На основе: ТЕЛ и ИНТ)</div>
+            <div class="skill-desc">Офиц. описание: Ваше успокаивающее заклинание восстанавливает здоровье всей вашей команды! (На основе: ТЕЛ и ИНТ)</div>
+            <div class="skill-simple">✨ Простыми словами: Моментально лечит всех ваших союзников.</div>
             <ul class="skill-mechanics">
                 <li><strong>Открывается на:</strong> 14 уровне</li>
                 <li><strong>Затраты маны:</strong> 25 MP</li>
-                <li><strong>Механика:</strong> Массовый отхил. Мгновенно восстанавливает здоровье всем участникам вашей команды.
+                <li><strong>Механика:</strong> Массовый отхил. Мгновенно восстанавливает здоровье (HP) всем участникам вашей команды.
                     <div class="formula"><strong>Формула исцеления:</strong> <code class="math">(ТЕЛ + ИНТ + 5) * 0.04</code> (то есть <code class="math">4%</code> суммы ваших статов каждому участнику). Разрешено использовать сколько угодно, пока есть мана.</div>
                 </li>
             </ul>
