@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навыки Классов - Questify</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; color: #333; background-color: #fff; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 40px; }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; color: #2c3e50; }
+        .skill { display: flex; align-items: flex-start; margin-bottom: 30px; background: #fdfdfd; border: 1px solid #eaeaea; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .skill img { width: 64px; height: 64px; margin-right: 20px; image-rendering: pixelated; background: #eee; border-radius: 4px; padding: 4px; }
+        @media (max-width: 600px) {
+            .skill { flex-direction: column; }
+            .skill img { margin-bottom: 15px; }
+        }
+        .skill-content { flex: 1; }
+        .skill h3 { margin-top: 0; margin-bottom: 10px; color: #4a154b; font-size: 1.25em; }
+        .skill-desc { font-style: italic; color: #555; margin-bottom: 15px; background: #f4f4f4; padding: 10px; border-left: 4px solid #ccc; border-radius: 4px; }
+        .skill-mechanics { margin: 0; padding-left: 20px; }
+        .skill-mechanics li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Навыки Классов (Воин, Разбойник, Маг, Целитель)</h1>
+
+    <!-- ВОИН -->
+    <h2>⚔️ Воин (Warrior)</h2>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_smash.png" alt="Мощный удар">
+        <div class="skill-content">
+            <h3>Мощный удар (Brutal Smash)</h3>
+            <div class="skill-desc">Вы делаете задание более синим/менее красным и наносите дополнительный урон Боссам! (На основе: СИЛ)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 10 MP</li>
+                <li><strong>Механика:</strong> Улучшает "цвет" (value) выбранной задачи, делая её выполнение более ценным (зависит от показателя Силы пользователя и шанса критического урона по Телосложению). То есть сдвигает ползунок её важности.</li>
+                <li><strong>Урон по боссу:</strong> Наносит боссу урон, пропорциональный вашей Силе, который также прибавляется к вашему урону в текущем квесте.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_defensiveStance.png" alt="Защитная стойка">
+        <div class="skill-content">
+            <h3>Защитная стойка (Defensive Stance)</h3>
+            <div class="skill-desc">Вы низко приседаете и получаете баф к телосложению! (На основе: ТЕЛ без бафов)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 25 MP</li>
+                <li><strong>Механика:</strong> Накладывает на самого персонажа баф, увеличивающий Телосложение на величину, пропорциональную базовому Телосложению. Это значительно снижает получаемый от невыполненных задач урон и урон от атак боссов.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_valorousPresence.png" alt="Присутствие духа">
+        <div class="skill-content">
+            <h3>Присутствие духа (Valorous Presence)</h3>
+            <div class="skill-desc">Ваша смелость повышает силу всей вашей команды! (На основе: СИЛ без бафов)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 20 MP</li>
+                <li><strong>Механика:</strong> Групповой баф: увеличивает показатель Силы для всех участников команды. Размер бафа зависит от базового показателя Силы кастующего. Увеличенная Сила поможет всей команде наносить больше урона боссам, а также получать больше опыта и золота за красные задачи.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_intimidate.png" alt="Устрашающий взор">
+        <div class="skill-content">
+            <h3>Устрашающий взор (Intimidating Gaze)</h3>
+            <div class="skill-desc">Ваш пристальный взгляд повышает телосложение всей вашей команды! (На основе: ТЕЛ без бафов)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 15 MP</li>
+                <li><strong>Механика:</strong> Групповой баф: увеличивает показатель Телосложения для всей команды, тем самым снижая урон, который участники получают в конце дня от пропущенных задач или босса (зависит от базового показателя Телосложения кастующего Воина).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- РАЗБОЙНИК -->
+    <h2>🗡️ Разбойник (Rogue)</h2>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_pickPocket.png" alt="Карманная кража">
+        <div class="skill-content">
+            <h3>Карманная кража (Pickpocket)</h3>
+            <div class="skill-desc">Вы грабите ближайшую задачу и получаете золото! (На основе: ВОС)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 10 MP</li>
+                <li><strong>Механика:</strong> Применяется на выбранную задачу (Привычку, Ежедневку или Задачу). Мгновенно генерирует для вас дополнительное Золото. Количество добытого золота зависит от показателя Восприятия (PER) персонажа и "жирности" (цвета) выбранной задачи.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_backStab.png" alt="Удар в спину">
+        <div class="skill-content">
+            <h3>Удар в спину (Backstab)</h3>
+            <div class="skill-desc">Вы предаете глупую задачу и получаете золото и опыт! (На основе: СИЛ)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 15 MP</li>
+                <li><strong>Механика:</strong> Применяется на задачу. Мгновенно даёт вам опыт (EXP) и золото (GP). Количество наград зависит от показателя Силы (STR) и имеет повышенный шанс (определяется как 30% бонус) вызвать критический удар.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_toolsOfTrade.png" alt="Орудия труда">
+        <div class="skill-content">
+            <h3>Орудия труда (Tools of the Trade)</h3>
+            <div class="skill-desc">Вы делитесь своими хитрыми приемами, повышая восприятие всей вашей команды! (На основе: ВОС без бафов)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 25 MP</li>
+                <li><strong>Механика:</strong> Групповой баф: увеличивает показатель Восприятия (PER) для всех участников команды. Чем выше Восприятие, тем больше золота и предметов (дропа) вся команда находит за выполнение задач в этот день.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_stealth.png" alt="Уйти в тень">
+        <div class="skill-content">
+            <h3>Уйти в тень (Stealth)</h3>
+            <div class="skill-desc">С каждым использованием, несколько невыполненных ежедневных заданий не нанесут урон ночью. Их серии и цвета не изменятся. (На основе: ВОС)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 45 MP</li>
+                <li><strong>Механика:</strong> Даёт персонажу баф "Невидимости". Каждое применение позволяет избежать урона от определенного количества невыполненных Ежедневных заданий в конце дня. Эти задачи считаются как бы замороженными (серия не спадает). Количество скрываемых заданий зависит от показателя Восприятия.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- МАГ -->
+    <h2>🧙‍♂️ Маг (Wizard)</h2>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_fireball.png" alt="Всплеск пламени">
+        <div class="skill-content">
+            <h3>Всплеск пламени (Burst of Flames)</h3>
+            <div class="skill-desc">Вы получаете опыт и наносите пламенный урон боссам! (На основе: ИНТ)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 10 MP</li>
+                <li><strong>Механика:</strong> Применяется на задачу. Даёт вам существенный мгновенный прирост опыта (EXP) в зависимости от вашего Интеллекта. Если у команды активен квест на босса, навык дополнительно наносит урон боссу.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_mpheal.png" alt="Эфирная зарядка">
+        <div class="skill-content">
+            <h3>Эфирная зарядка (Ethereal Surge)</h3>
+            <div class="skill-desc">Вы жертвуете ману, чтобы участники команды, кроме магов, восполнили ману! (На основе: ИНТ)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 30 MP</li>
+                <li><strong>Механика:</strong> Групповое умение. Восстанавливает MP (ману) всем участникам команды, за исключением других Магов. Количество восстанавливаемой маны зависит от показателя Интеллекта кастующего.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_earth.png" alt="Землетрясение">
+        <div class="skill-content">
+            <h3>Землетрясение (Earthquake)</h3>
+            <div class="skill-desc">Силой ума вы сотрясаете землю. Вся ваша команда получает баф к интеллекту! (На основе: ИНТ без бафов)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 35 MP</li>
+                <li><strong>Механика:</strong> Групповой баф: временно увеличивает Интеллект всей команды. Более высокий Интеллект позволяет магам получать больше маны за выполнения задач, а также помогает получать больше опыта для всех классов.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_frost.png" alt="Пронизывающий мороз">
+        <div class="skill-content">
+            <h3>Пронизывающий мороз (Chilling Frost)</h3>
+            <div class="skill-desc">Одним взмахом, все ваши задачи покрываются льдом, из-за чего ваши серии не сбрасываются завтра!</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 40 MP</li>
+                <li><strong>Механика:</strong> Накладывает статус "Заморозка серий" на персонажа на текущий день. Если вы не выполните ежедневные задачи, их серии (streak) не обнулятся на следующий день. Может быть применено только один раз за день (однократно).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ЦЕЛИТЕЛЬ -->
+    <h2>💖 Целитель (Healer)</h2>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_heal.png" alt="Исцеляющий свет">
+        <div class="skill-content">
+            <h3>Исцеляющий свет (Healing Light)</h3>
+            <div class="skill-desc">Свет окутывает ваше тело, исцеляя раны. Вы восстанавливаете здоровье! (На основе: ТЕЛ и ИНТ)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 15 MP</li>
+                <li><strong>Механика:</strong> Сильно и точечно лечит только вас, оберегая от гибели. Восстанавливает здоровье (HP) до максимума в 50 очков. Количество исцеления зависит от суммы базовых Телосложения и Интеллекта. Нельзя использовать, если здоровье уже полное.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_brightness.png" alt="Ослепляющая вспышка">
+        <div class="skill-content">
+            <h3>Ослепляющая вспышка (Searing Brightness)</h3>
+            <div class="skill-desc">Вспышка света ослепляет ваши задачи. Они становятся более синими и менее красными! (На основе: ИНТ)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 15 MP</li>
+                <li><strong>Механика:</strong> Применяется сразу ко всем вашим задачам списком. Значительно улучшает цвет всех ваших задач, уводя их цвет в синюю сторону (увеличивая value), что позволяет получать больше наград за их выполнение и снижать потенциальный урон. Эффект зависит от показателя Интеллекта.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_protectAura.png" alt="Защитная аура">
+        <div class="skill-content">
+            <h3>Защитная аура (Protective Aura)</h3>
+            <div class="skill-desc">Вы защищаете свою команду, повышая их телосложение! (На основе: ТЕЛ без бафов)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 30 MP</li>
+                <li><strong>Механика:</strong> Групповой баф: увеличивает показатель Телосложения всех участников команды. Это значительно уменьшает урон, который они получают за пропущенные ежедневные задачи (зависит от вашего Телосложения).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="skill">
+        <img src="https://habitica-assets.s3.amazonaws.com/mobileApp/images/shop_healAll.png" alt="Благословение">
+        <div class="skill-content">
+            <h3>Благословение (Blessing)</h3>
+            <div class="skill-desc">Ваше успокаивающее заклинание восстанавливает здоровье всей вашей команды! (На основе: ТЕЛ и ИНТ)</div>
+            <ul class="skill-mechanics">
+                <li><strong>Затраты маны:</strong> 25 MP</li>
+                <li><strong>Механика:</strong> Массовый отхил. Мгновенно восстанавливает здоровье (HP) всем участникам вашей команды (вылечит каждого максимум до 50 очков). Количество восстанавливаемого здоровья зависит от суммы показателей вашего Телосложения и Интеллекта.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
